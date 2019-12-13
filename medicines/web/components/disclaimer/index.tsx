@@ -2,13 +2,11 @@ import React, { MouseEvent, useState } from 'react';
 import styled from 'styled-components';
 import {
   black,
-  mhra,
   mhra70,
   mhraGray,
   mhraWhite,
   primaryColor,
 } from '../../styles/colors';
-import { baseSpace } from '../../styles/dimensions';
 
 interface IDisclaimerProps {
   onDisclaimerAgree: (event: MouseEvent<HTMLButtonElement>) => void;
