@@ -119,7 +119,7 @@ const DrugIndex: React.FC<IIndex> = ({ title, items, horizontal }) => {
   const searchLinkQuery = (item: IProduct): ParsedUrlQueryInput => {
     if (level < 2) {
       const query: ParsedUrlQueryInput = {
-        substance: encodeURIComponent(item.name),
+        substance: item.name,
       };
 
       if (item.name.length === 1) {
@@ -132,7 +132,7 @@ const DrugIndex: React.FC<IIndex> = ({ title, items, horizontal }) => {
     return {
       product: true,
       page: 1,
-      search: encodeURIComponent(item.name),
+      search: item.name,
     };
   };
 
