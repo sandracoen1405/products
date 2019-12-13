@@ -1,3 +1,4 @@
+import { ParsedUrlQueryInput } from 'querystring';
 import React from 'react';
 import styled from 'styled-components';
 import { IProduct, isIndex, isSubstance } from '../../model/substance';
@@ -115,14 +116,24 @@ const DrugIndex: React.FC<IIndex> = ({ title, items, horizontal }) => {
 
   const level = isIndex(items[0]) ? 0 : isSubstance(items[0]) ? 1 : 2;
 
-  const searchLink = (item: IProduct) => {
+  const searchLinkQuery = (item: IProduct): ParsedUrlQueryInput => {
     if (level < 2) {
-      return `?substance=${encodeURIComponent(item.name)}${
-        item.name.length === 1 ? '&index=true' : ''
-      }`;
+      const query: ParsedUrlQueryInput = {
+        substance: encodeURIComponent(item.name),
+      };
+
+      if (item.name.length === 1) {
+        query.index = true;
+      }
+
+      return query;
     }
 
-    return `?${'&product=true&page=1&search'}=${encodeURIComponent(item.name)}`;
+    return {
+      product: true,
+      page: 1,
+      search: encodeURIComponent(item.name),
+    };
   };
 
   return (
@@ -132,7 +143,7 @@ const DrugIndex: React.FC<IIndex> = ({ title, items, horizontal }) => {
         {items.map(item => {
           return (
             <li key={item.name} className={level > 0 ? 'substance-name' : ''}>
-              <Link href={searchLink(item)}>
+              <Link href={{ pathname: '', query: searchLinkQuery(item) }}>
                 <a>
                   {item.name} {item.count && <>({item.count} files)</>}
                 </a>
