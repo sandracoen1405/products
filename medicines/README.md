@@ -10,7 +10,7 @@ This site allows users to find:
 
 ## Architecture
 
-See [project architecture](./docs/architecture.svg).
+See [project architecture](./docs/architecture).
 
 ## Project contents
 
@@ -21,3 +21,5 @@ See [project architecture](./docs/architecture.svg).
 - [web](./web) - everything related to the front-end of the site
 
 ## Contributor guidelines
+
+See [contributor guidelines](./docs/contributor_guidelines).

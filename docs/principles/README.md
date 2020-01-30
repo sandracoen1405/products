@@ -1,6 +1,6 @@
 ## Principles
 
-### See also:
+### Contents:
 
 - [Microservices](./microservices.md)
 
