@@ -1,4 +1,4 @@
-# Medicines Information Portal
+# MHRA Products Portal
 
 This project contains the source code for the medicines information portal, which can be found at: https://products.mhra.gov.uk/
 
@@ -8,9 +8,10 @@ This site allows users to find:
 - The description of the medicinal product’s properties and how it can be used
 - Scientific reports about marketing authorisations for medicines
 
-## Architecture
+## Overview
 
-See [project architecture](./docs/architecture).
+- [project architecture](./docs/architecture)
+- [data](./docs/data)
 
 ## Project contents
 

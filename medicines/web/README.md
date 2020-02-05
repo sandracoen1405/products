@@ -1,4 +1,4 @@
-# MHRA Medicines Information Portal
+# MHRA Products Portal
 
 ## What is it?
 
