@@ -12,7 +12,7 @@ The main data used by the products site relates predominantly to 3 types of docu
 
 Documents, their metadata and their contents are searchable and can be accessed and opened through the site.
 
-The current architecture of the site can be seen [here](../architecture#progress) and the configuration files to create these resources for each environment can be found [here](../../infrastructure/).
+The current architecture of the site can be seen [here](../architecture#progress) and the configuration files to create these resources for each environment can be found [here](../../../infrastructure/).
 
 ## Storage
 
